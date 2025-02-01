@@ -26,8 +26,8 @@ body {
   background: darkblue;
   padding: 50px 20px;
   color: white;
-  border-bottom-left-radius: 540px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 .profile-picture {
   width: 100px;
@@ -42,11 +42,13 @@ body {
 }
 h2 {
   font-size: 24px;
+  margin-top: 15px;
   font-weight: 600;
   
 }
 h3 {
   font-size: 20px;
+  margin-top: 15px;
   color: white;
 }
 .bio {
