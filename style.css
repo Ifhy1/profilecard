@@ -27,7 +27,7 @@ body {
   padding: 50px 20px;
   color: white;
   border-bottom-left-radius: 540px;
-  border-bottom-right-radius: 50px;
+  border-bottom-right-radius: 0px;
 }
 .profile-picture {
   width: 100px;
