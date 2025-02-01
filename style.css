@@ -1,135 +1,77 @@
-/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: gray; /* Adding a smooth gradient background */
-  margin: 0;
-  overflow: hidden;
+  height: 90vh;
+  background-color: gray;
 }
-
-/* Profile Card */
 .profile-card {
-  background: aqua;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 350px;
-  transition: all 0.3s ease-in-out; /* Smooth transition effect */
 }
-
-/* Profile card hover effect */
-.profile-card:hover {
-  transform: translateY(-15px); /* Makes the profile card slightly lift up on hover */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* More shadow depth */
-  
+.profile-header {
+  background: darkblue;
+  padding: 50px 20px;
+  color: white;
+  border-bottom-left-radius: 540px;
+  border-bottom-right-radius: 50px;
 }
-
-/* Profile Picture */
 .profile-picture {
-  width: 120px;
-  height: 120px;
-  padding: 5px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow around profile picture */
-  margin-bottom: 15px;
-  transition: transform 0.3s ease; /* Smooth zoom on hover */
+  border: 4px solid white;
+  margin-top: -40px;
 }
-
-/* Profile picture zoom effect */
-.profile-picture:hover {
-  transform: scale(1.1); /* Slight zoom effect */
+.info {
+  padding: 20px;
 }
-
-/* Heading Styles */
 h2 {
-  margin: 15px 0;
-  font-size: 28px;
-  font-weight: 700;
-  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  
 }
-
 h3 {
-  color: #777;
-  margin: 5px 0;
-  font-size: 26px;
-}
-
-/* Bio Text */
-.bio {
-  font-size: 16px;
-  color: #555;
-  margin: 20px 0;
-  line-height: 1.7;
-  text-align: justify;
-  font-family: 'Roboto', sans-serif; 
-}
-
-/* Location & Email */
-.location, .email {
   font-size: 20px;
-  color: #333;
-  margin: 5px 0;
-  font-weight: 500;
+  color: white;
 }
-
-/* Social Links */
-.social-link {
+.bio {
+  font-size: 14px;
+  color: black;
+  margin: 10px 0;
+  padding: 0 15px;
+}
+.location, .email, .utc-time {
+  font-size: 14px;
+  color: black;
+  margin: 5px 0;
+}
+.social-links {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-top: 20px;
+  gap: 15px;
+  margin: 15px 0;
 }
-
-.social-link a {
+.social-links a {
+  color: black;
   font-size: 20px;
-  color: #333;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out; /* Smooth transition */
+  transition: 0.3s;
+}
+.social-links a:hover {
+  color: blue;
 }
 
-.social-link a:hover {
-  color: #c40000; /* Red color on hover */
-  transform: scale(1.2); /* Slight zoom effect on hover */
-  text-decoration: underline;
-}
-
-/* Active state for social links */
-.social-link a:active {
-  color: #e63946; /* Darker red when clicked */
-}
-
-/* UTC Time */
-.utc-time {
-  font-size: 14px;
-  color: #999;
-  margin-top: 15px;
-  font-style: italic;
-  letter-spacing: 0.5px;
-}
-
-/* Responsive Styles */
-@media (max-width: 600px) {
-  .profile-card {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .profile-picture {
-    width: 100px;
-    height: 100px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  .bio {
-    font-size: 14px;
-  }
-}

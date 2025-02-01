@@ -1,44 +1,52 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Card</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  </head>
-
-    <div class="profile-card">
-      <img src="mypics.jpg" alt="Profile Picture" data-testid="profilePicture" class="profile-pic">
-      <h2 data-testid="fullName">IHEDIOHA IFEYINWA</h2>
-      <h3 data-testid="jobTitle">Frontend Developer</h3>
-      <p data-testid="shortBio">I’m an enthusiastic learner in front-end development, eager to grow and improve. Right now, I’m focusing on enhancing my skills in HTML, CSS, and JavaScript through small projects. I’m excited about creating interactive, user-friendly websites and constantly exploring new tools and techniques to improve my work.
-         While I’m still building my expertise, I enjoy the process of learning and taking on new challenges.
-         My goal is to keep growing as a developer and eventually work on bigger, more complex projects in the front-end space.
-       
-      <p data-testid="currentLocation"><h4>Lagos, Nigeria</h4></p>
-     <h4><p>Email: <a href="mailto:ihediohaifeyinwa@gmail.com" data-testid="emailAddress">ihediohaifeyinwa@gmail.com</a></p>
-
-      <div class="social-links">
-       <a href="https://www.linkedin.com/in/ifeyinwa-ihedioha?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/Ifhy1" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://x.com/_kkhyu?s=21" target="_blank"><i class="fa-brands fa-x"></i></a>
-      </div>
-
-      <p class="time" data-testid="currentTimeUTC">UTC Time: <span id="utc-time"></span></p>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+  <div class="profile-card">
+    <div class="profile-header">
+        <img src="mypics.jpg" alt="Profile Picture" class="profile-picture" data-testid="profilePicture">
+        <h2 data-testid="fullName">IHEDIOHA IFEYINWA</h2>
+        <h3 data-testid="jobTitle">Frontend Developer</h3>
     </div>
-
-    <script>
-      function updateTime() {
-        const utcTimeElement = document.getElementById("utc-time");
-       setInterval(() => {
-          const now = new Date();
-          utcTimeElement.textContent = now.toUTCString();
-       }, 1000);
+    <div class="info">
+        <p class="bio" data-testid="shortBio">I'm an enthusiastic front-end developer honing my HTML, CSS, and JavaScript skills through small projects. I focus on creating interactive, user-friendly websites while exploring new tools to improve my work. I enjoy learning, tackling challenges, and growing my expertise.
+           My goal is to keep advancing and eventually work on larger, more complex front-end projects.
+           <p data-testid="currentLocation"><h4>Lagos, Nigeria</h4></p>
         
-      }
-      document.addEventListener("DOMContentLoaded", updateTime)
-      </script>
-  </body>
+        <h4><p>Email: <a href="mailto:ihediohaifeyinwa@gmail.com" data-testid="emailAddress">ihediohaifeyinwa@gmail.com</a></p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ifeyinwa-ihedioha?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+             <a href="https://github.com/Ifhy1" target="_blank"><i class="fa-brands fa-github"></i></a>
+             <a href="https://x.com/_kkhyu?s=21" target="_blank"><i class="fa-brands fa-x"></i></a>
+           </div>
+        <p class="utc-time" data-testid="currentTimeUTC"></p>
+    </div>
+</div>
+<script>
+  function updateTime() {
+    const utcTimeElement = document.querySelector('.utc-time');
+
+    function refreshTime() {
+        const now = new Date();
+        const utcTime = now.toUTCString();
+        utcTimeElement.textContent = `Current UTC Time: ${utcTime}`;
+    }
+
+    refreshTime(); 
+    setInterval(refreshTime, 1000); 
+}
+
+updateTime();
+
+  </script>
+</body>
 </html>
